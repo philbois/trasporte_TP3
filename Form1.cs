@@ -12,6 +12,7 @@ namespace trasporte_TP3
 {
     public partial class Form1 : Form
     {
+        cargas reparto;
         public Form1()
         {
             InitializeComponent();
@@ -24,11 +25,21 @@ namespace trasporte_TP3
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Form2 vcarga=new Form2();
-            //pruebas tiempo
             DateTime dt = dTPicker.Value;
+            DateTime tiempo = DateTime.Now;
+            Form2 vcarga=new Form2();
+            reparto = new cargas("boruchovas", 252312, 25, 26, 23, tiempo);
+            //pruebas tiempo
+            listBox1.Items.Add(reparto.Nombre);
+            listBox1.Items.Add(reparto.Id.ToString());
+            listBox1.Items.Add(reparto.TipoA.ToString());
+            listBox1.Items.Add(reparto.TipoB.ToString());
+            listBox1.Items.Add(reparto.TipoC.ToString());
+            listBox1.Items.Add(reparto.Hora().ToString());
+            listBox1.Items.Add(reparto.dia().ToString());
+            listBox1.Items.Add(dt.Hour);
             //MessageBox.Show("dia" + dt.DayOfWeek+"\n hora"+dt.Hour);
-            if(dt.DayOfWeek == DayOfWeek.Sunday)
+            if (dt.DayOfWeek == DayOfWeek.Sunday)
             {
                 MessageBox.Show("un exito");
             }

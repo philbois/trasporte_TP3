@@ -35,6 +35,8 @@
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.dTPicker = new System.Windows.Forms.DateTimePicker();
+            this.label3 = new System.Windows.Forms.Label();
+            this.listBox1 = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // textBox4
@@ -46,11 +48,11 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(161, 278);
+            this.button2.Location = new System.Drawing.Point(38, 358);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(100, 48);
             this.button2.TabIndex = 9;
-            this.button2.Text = "button2";
+            this.button2.Text = "x";
             this.button2.UseVisualStyleBackColor = true;
             // 
             // button3
@@ -59,7 +61,7 @@
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(101, 48);
             this.button3.TabIndex = 10;
-            this.button3.Text = "button3";
+            this.button3.Text = "Nuevo";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
@@ -93,16 +95,36 @@
             // 
             this.dTPicker.CustomFormat = " dd/MM/yyyy hh:mm:ss tt";
             this.dTPicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dTPicker.Location = new System.Drawing.Point(38, 28);
+            this.dTPicker.Location = new System.Drawing.Point(38, 40);
             this.dTPicker.Name = "dTPicker";
             this.dTPicker.Size = new System.Drawing.Size(199, 22);
             this.dTPicker.TabIndex = 15;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(35, 21);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(152, 16);
+            this.label3.TabIndex = 16;
+            this.label3.Text = "Fecha y hora de ingreso";
+            // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 16;
+            this.listBox1.Location = new System.Drawing.Point(283, 34);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(250, 372);
+            this.listBox1.TabIndex = 17;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(408, 450);
+            this.ClientSize = new System.Drawing.Size(545, 450);
+            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.dTPicker);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBox5);
@@ -128,6 +150,8 @@
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DateTimePicker dTPicker;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ListBox listBox1;
     }
 }
 
