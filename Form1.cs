@@ -21,5 +21,19 @@ namespace trasporte_TP3
         {
 
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Form2 vcarga=new Form2();
+            //pruebas tiempo
+            DateTime dt = dTPicker.Value;
+            //MessageBox.Show("dia" + dt.DayOfWeek+"\n hora"+dt.Hour);
+            if(dt.DayOfWeek == DayOfWeek.Sunday)
+            {
+                MessageBox.Show("un exito");
+            }
+
+
+        }
     }
 }
