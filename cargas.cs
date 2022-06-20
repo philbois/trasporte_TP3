@@ -23,14 +23,14 @@ namespace trasporte_TP3
         DateTime hora;
         public cargas(string nom, int id, int tipoA,int tipoB, int tipoC, DateTime tiempo)
         {
-            this.Id = id;
-            this.Nombre = nom;
-            this.TipoA=tipoA*5;
-            this.TipoB=tipoB*15;
-            this.TipoC=tipoC*25;
+            this.id = id;
+            this.nombre = nom;
+            this.tipoA=tipoA*5;
+            this.tipoB=tipoB*15;
+            this.tipoC=tipoC*25;
             hora = tiempo;
-            this.peso = TipoA + TipoB + TipoC;
-            this.difPeso = peso - 1000;
+            this.peso = this.tipoA + this.tipoB + this.tipoC;
+            this.difPeso = peso - 1000;//remplazar x variable;
             if (this.difPeso < -99)
             {
                 recargo = 0.10;
