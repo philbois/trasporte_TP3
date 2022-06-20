@@ -17,19 +17,20 @@ namespace trasporte_TP3
             InitializeComponent();
         }
 
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-            textA.Enabled = checkBox1.Checked;
+
+            
         }
 
-        private void checkBox2_CheckedChanged(object sender, EventArgs e)
+        private void checkBox4_CheckedChanged(object sender, EventArgs e)
         {
-            textB.Enabled = checkBox2.Checked;
+
         }
 
-        private void checkBox3_CheckedChanged(object sender, EventArgs e)
+        private void cbFeriado_CheckedChanged(object sender, EventArgs e)
         {
-            textC.Enabled = checkBox3.Checked;
+
         }
     }
 }

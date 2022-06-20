@@ -9,39 +9,59 @@ namespace trasporte_TP3
 {
     internal class cargas
     {
-        static int contador;
+       
         private int id;
         private string nombre;
-        private double enviob = 5.25;
-        private double eFull = 8.95;
+        /*private double enviob = 5.25;
+        private double eFull = 8.95;*/
+        private double envio;
         private int tipoA, tipoB, tipoC;
+        private double costo;
+        private double peso;
+        private double difPeso;
+        private double recargo;
         DateTime hora;
-        int peso=1000, pesoEntrada, difpeso; //agregarcion
-        double costo;
-        bool feriado;
-        double porc;
-        bool multa = false;
-        public cargas(string nom, int id, int tipoA,int tipoB, int tipoC, DateTime tiempo, bool feriado)
+        public cargas(string nom, int id, int tipoA,int tipoB, int tipoC, DateTime tiempo)
         {
-            contador++;// variable que cuenta los contenedores
             this.Id = id;
             this.Nombre = nom;
-            
+            this.TipoA=tipoA*5;
+            this.TipoB=tipoB*15;
+            this.TipoC=tipoC*25;
             hora = tiempo;
-         
-            pesoEntrada=(5*tipoA) +(15* tipoB) +(25* tipoC);
-            difpeso= peso- pesoEntrada;
+            this.peso = TipoA + TipoB + TipoC;
+            this.difPeso = peso - 1000;
+            if (this.difPeso < -99)
+            {
+                recargo = 0.10;
+            }
+            else if (this.difPeso > -100 && < -10)
+            {
+                recargo = 0.07;
+            }
+            else if (this.difPeso > -10 && < 5)
+            {
+                recargo = 0.95;
+            }
+            else if (this.difPeso > 5 && < 50)
+            {
+                recargo = 0.18;
+            }
+            else if (this.difPeso > 50)
+            {
+                recargo = 0.80 + multa
+            }
 
+            } 
             
 
         }
-        public double Costo()
-        {
-            return costo
-        }
+
         public int Id { get => id; set => id = value; }
         public string Nombre { get => nombre; set => nombre = value; }
-
+        public int TipoA { get => tipoA; set => tipoA = value; }
+        public int TipoB { get => tipoB; set => tipoB = value; }
+        public int TipoC { get => tipoC; set => tipoC = value; }
         public int Hora()
         {
             int h = Convert.ToInt32(hora.Hour);

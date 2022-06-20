@@ -12,8 +12,7 @@ namespace trasporte_TP3
 {
     public partial class Form1 : Form
     {
-        cargas [] reparto = new cargas[100];
-        int i = 0;
+        cargas reparto;
         public Form1()
         {
             InitializeComponent();
@@ -21,39 +20,55 @@ namespace trasporte_TP3
 
         private void label1_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Form2 vcarga=new Form2();
-            int tA = 0, tB=0, tC=0;
-            bool fer = false;
-            fer = cFeriado.Checked;
             DateTime dt = dTPicker.Value;
-            // DateTime tiempo = DateTime.Now; 
-            string empre = tNombre.Text;
-            int ID = Convert.ToInt32(tID.Text);
-            if(vcarga.ShowDialog() == DialogResult.OK)
+            DateTime tiempo = DateTime.Now;
+            Form2 vcarga=new Form2();
+            reparto = new cargas("boruchovas", 252312, 25, 26, 23, tiempo);
+            //pruebas tiempo
+            listBox1.Items.Add(reparto.Nombre);
+            listBox1.Items.Add(reparto.Id.ToString());
+            listBox1.Items.Add(reparto.TipoA.ToString());
+            listBox1.Items.Add(reparto.TipoB.ToString());
+            listBox1.Items.Add(reparto.TipoC.ToString());
+            listBox1.Items.Add(reparto.Hora().ToString());
+            listBox1.Items.Add(reparto.dia().ToString());
+            listBox1.Items.Add(dt.Hour);
+            //MessageBox.Show("dia" + dt.DayOfWeek+"\n hora"+dt.Hour);
+            if (dt.DayOfWeek == DayOfWeek.Sunday)
             {
-                tA = Convert.ToInt32(vcarga.textA.Text);
-                tB = Convert.ToInt32(vcarga.textB.Text);
-                tC = Convert.ToInt32(vcarga.textC.Text);
+                MessageBox.Show("un exito");
             }
 
-            reparto[i] = new cargas(empre, ID, tA, tB, tC, dt,fer);
-            
-            //pruebas tiempo
-            listBox1.Items.Add(reparto[i].Nombre);
-            listBox1.Items.Add(reparto[i].Id.ToString());
-            listBox1.Items.Add(reparto[i].TipoA.ToString());
-            listBox1.Items.Add(reparto[i].TipoB.ToString());
-            listBox1.Items.Add(reparto[i].TipoC.ToString());
-            listBox1.Items.Add(reparto[i].Hora().ToString());
-            listBox1.Items.Add(reparto[i].dia().ToString());
-            i++;
-            vcarga.Dispose();
-            //MessageBox.Show("dia" + dt.DayOfWeek+"\n hora"+dt.Hour);
+
+        }
+
+        private void dTPicker_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox5_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
 
         }
     }
