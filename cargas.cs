@@ -59,7 +59,7 @@ namespace trasporte_TP3
             {
                 descuento = -5;
             }
-            if (!hora.Hour > 6 && hora.Hour <= 20)
+            if (!(hora.Hour > 6 && hora.Hour <= 20))
             {
                 descuento = +4;
             }
