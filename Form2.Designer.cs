@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.Normal = new System.Windows.Forms.RadioButton();
+            this.Full = new System.Windows.Forms.RadioButton();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
@@ -40,9 +43,6 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.cbFeriado = new System.Windows.Forms.CheckBox();
-            this.Full = new System.Windows.Forms.RadioButton();
-            this.Normal = new System.Windows.Forms.RadioButton();
-            this.label2 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -67,6 +67,39 @@
             this.groupBox1.TabIndex = 15;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Carga";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(188, 46);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(34, 13);
+            this.label2.TabIndex = 19;
+            this.label2.Text = "Envio";
+            // 
+            // Normal
+            // 
+            this.Normal.AutoSize = true;
+            this.Normal.Location = new System.Drawing.Point(190, 92);
+            this.Normal.Name = "Normal";
+            this.Normal.Size = new System.Drawing.Size(58, 17);
+            this.Normal.TabIndex = 18;
+            this.Normal.TabStop = true;
+            this.Normal.Text = "Normal";
+            this.Normal.UseVisualStyleBackColor = true;
+            this.Normal.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged_1);
+            // 
+            // Full
+            // 
+            this.Full.AutoSize = true;
+            this.Full.Location = new System.Drawing.Point(190, 70);
+            this.Full.Name = "Full";
+            this.Full.Size = new System.Drawing.Size(41, 17);
+            this.Full.TabIndex = 17;
+            this.Full.TabStop = true;
+            this.Full.Text = "Full";
+            this.Full.UseVisualStyleBackColor = true;
+            this.Full.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
             // label1
             // 
@@ -178,39 +211,6 @@
             this.cbFeriado.Text = "Feriado";
             this.cbFeriado.UseVisualStyleBackColor = true;
             this.cbFeriado.CheckedChanged += new System.EventHandler(this.cbFeriado_CheckedChanged);
-            // 
-            // Full
-            // 
-            this.Full.AutoSize = true;
-            this.Full.Location = new System.Drawing.Point(190, 70);
-            this.Full.Name = "Full";
-            this.Full.Size = new System.Drawing.Size(41, 17);
-            this.Full.TabIndex = 17;
-            this.Full.TabStop = true;
-            this.Full.Text = "Full";
-            this.Full.UseVisualStyleBackColor = true;
-            this.Full.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
-            // 
-            // Normal
-            // 
-            this.Normal.AutoSize = true;
-            this.Normal.Location = new System.Drawing.Point(190, 92);
-            this.Normal.Name = "Normal";
-            this.Normal.Size = new System.Drawing.Size(58, 17);
-            this.Normal.TabIndex = 18;
-            this.Normal.TabStop = true;
-            this.Normal.Text = "Normal";
-            this.Normal.UseVisualStyleBackColor = true;
-            this.Normal.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged_1);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(188, 46);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(34, 13);
-            this.label2.TabIndex = 19;
-            this.label2.Text = "Envio";
             // 
             // Form2
             // 
