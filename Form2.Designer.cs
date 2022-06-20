@@ -54,7 +54,7 @@
             this.groupBox1.Controls.Add(this.textA);
             this.groupBox1.Location = new System.Drawing.Point(27, 35);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(305, 165);
+            this.groupBox1.Size = new System.Drawing.Size(305, 200);
             this.groupBox1.TabIndex = 15;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Carga";
