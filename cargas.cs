@@ -9,99 +9,97 @@ namespace trasporte_TP3
 {
     internal class cargas
     {
-        static int contador;
+        static int contador; //contador statick
+        static int sTipoA, sTipoB, sTipoC;//acumulador static
+
+
         private int id;
         private string nombre;
-<<<<<<< Updated upstream
-        private double enviob = 5.25;
-        private double eFull = 8.95;
-        private int tipoA, tipoB, tipoC;
-=======
-        /*private double enviob = 5.25;
-        private double eFull = 8.95;*/
-        private double envio;
-        private int tipoA, TipoB, tipoC;
-        private double costo;
-        private double peso;
-        private double difPeso;
-        private double recargo;
->>>>>>> Stashed changes
-        DateTime hora;
-        int peso=1000, pesoEntrada, difpeso; //agregarcion
-        double costo;
+        private double costoEnvio;
+        private double porc, recarTiempo = 0;
+        private double costo = 0;
         bool feriado;
-        double porc;
+        bool tipoEnvio;
         bool multa = false;
-        public cargas(string nom, int id, int tipoA,int tipoB, int tipoC, DateTime tiempo, bool feriado)
-        {
-<<<<<<< Updated upstream
-            contador++;// variable que cuenta los contenedores
-            this.Id = id;
-            this.Nombre = nom;
-            
-            hora = tiempo;
-         
-            pesoEntrada=(5*tipoA) +(15* tipoB) +(25* tipoC);
-            difpeso= peso- pesoEntrada;
+        int peso = 1000, pesoEntrada, difPeso, recargo=0;
+        DateTime hora;
+        //private int tipoA, tipoB, tipoC;
 
-            if (difpeso > -100 && difpeso < -10)
+
+
+
+
+
+        public cargas(string nom, int id, int tipoA, int tipoB, int tipoC, DateTime tiempo, bool feriado, bool tEnvio)
+        {
+            contador++;// variable que cuenta los contenedores
+            this.id = id; //guardo id
+            this.nombre = nom; 
+            hora = tiempo;//guardo hora
+            this.feriado = feriado;
+            pesoEntrada = (5 * tipoA) + (15 * tipoB) + (25 * tipoC);
+            difPeso = pesoEntrada - peso;
+            tipoEnvio = tEnvio;
+            sTipoA += tipoA;
+            sTipoB += tipoB; 
+            sTipoC += tipoC;
+        }
+        private void comparacion()
+        {
+            if (difPeso <= -100)
             {
-                porc = 7;
-            }else if (difpeso > -10)
-=======
-            this.id = id;
-            this.nombre = nom;
-           
-            hora = tiempo;
-            peso = tipoA*5 + tipoB*15 + tipoC*25;
-            difPeso = peso - 1000;
-            if (this.difPeso < -99)
->>>>>>> Stashed changes
+                porc = 1.1;
+            }
+            else if (difPeso > -100 && difPeso <= -10)
             {
-                porc = -5;
-            }else if(difpeso >5 && difpeso <= 50)
+                porc = 1.07;
+            }
+            else if (difPeso > -10 && difPeso <= 5)
             {
-                porc = 18;
-            }else if( difpeso > 50)
+                porc = 0.95;
+
+            }
+            else if (difPeso > 5 && difPeso <= 50)
             {
-                porc = 80;
+                porc = 1.18;
                 multa = true;
             }
             else
             {
-                porc = 10;
+                porc = 1.8;
+                multa = true;
             }
-      
-            if(hora.DayOfWeek == DayOfWeek.Sunday || feriado==true)
+            ///--------
+            if (hora.DayOfWeek == DayOfWeek.Sunday || feriado == true)//domingo o feriado
             {
-                //agregar mil al precio
+                recargo = 1000;
             }
-            if (hora.Hour >= 6 && hora.Hour<=20)
+            if (hora.Hour >= 6 && hora.Hour <= 20) //hora entre las 6 y las 20
             {
-                descuento = -5;
+                recarTiempo = 0.95;
             }
-            if (!(hora.Hour > 6 && hora.Hour <= 20))
+            if (!(hora.Hour > 6 && hora.Hour <= 20))//hora fuera de las 6 y 20 
             {
-                descuento = +4;
+                recarTiempo = 1.04;
             }
+            if (tipoEnvio)//tipo de envio
+            {
+                costoEnvio =5.25 ;
+            }
+            else costoEnvio = 8.95; //tipo de envio(precio)
+        }//comparacion de peso
+        public double Costo()//costo cobro
+        {
+            comparacion();
+            costo = (((pesoEntrada * costoEnvio) * porc)*recarTiempo) + recargo;
+            return costo;
+        }
+        public int Id { get => id; }
 
-        }
-        public double Costo()
-        {
-            return costo
-        }
-        public int Id { get => id; set => id = value; }
-        public string Nombre { get => nombre; set => nombre = value; }
+        public bool Multa { get => multa;}
+        public string Nombre { get => nombre; }
 
-        public int Hora()
-        {
-            int h = Convert.ToInt32(hora.Hour);
-            return h;
-        }
-        public string dia()
-        {
-            string semana=hora.DayOfWeek.ToString();
-            return semana;
-        }
+        public string Hora() => hora.ToString("f");
+     
     }
 }

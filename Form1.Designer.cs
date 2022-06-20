@@ -36,8 +36,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.dTPicker = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
-            this.listBox1 = new System.Windows.Forms.ListBox();
             this.cFeriado = new System.Windows.Forms.CheckBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // tID
@@ -110,32 +110,32 @@
             this.label3.TabIndex = 16;
             this.label3.Text = "Fecha y hora de ingreso";
             // 
-            // listBox1
-            // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 16;
-            this.listBox1.Location = new System.Drawing.Point(283, 34);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(250, 372);
-            this.listBox1.TabIndex = 17;
-            // 
             // cFeriado
             // 
             this.cFeriado.AutoSize = true;
-            this.cFeriado.Location = new System.Drawing.Point(166, 258);
+            this.cFeriado.Location = new System.Drawing.Point(289, 44);
             this.cFeriado.Name = "cFeriado";
             this.cFeriado.Size = new System.Drawing.Size(88, 20);
             this.cFeriado.TabIndex = 18;
             this.cFeriado.Text = "FERIADO";
             this.cFeriado.UseVisualStyleBackColor = true;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(197, 358);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(89, 48);
+            this.button1.TabIndex = 19;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(545, 450);
+            this.ClientSize = new System.Drawing.Size(411, 450);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.cFeriado);
-            this.Controls.Add(this.listBox1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.dTPicker);
             this.Controls.Add(this.label2);
@@ -155,16 +155,17 @@
         }
 
         #endregion
+        private System.Windows.Forms.TextBox tNombre;
         private System.Windows.Forms.TextBox tID;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox tNombre;
+
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DateTimePicker dTPicker;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.CheckBox cFeriado;
+        private System.Windows.Forms.Button button1;
     }
 }
 
