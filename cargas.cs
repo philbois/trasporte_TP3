@@ -12,9 +12,20 @@ namespace trasporte_TP3
         static int contador;
         private int id;
         private string nombre;
+<<<<<<< Updated upstream
         private double enviob = 5.25;
         private double eFull = 8.95;
         private int tipoA, tipoB, tipoC;
+=======
+        /*private double enviob = 5.25;
+        private double eFull = 8.95;*/
+        private double envio;
+        private int tipoA, TipoB, tipoC;
+        private double costo;
+        private double peso;
+        private double difPeso;
+        private double recargo;
+>>>>>>> Stashed changes
         DateTime hora;
         int peso=1000, pesoEntrada, difpeso; //agregarcion
         double costo;
@@ -23,6 +34,7 @@ namespace trasporte_TP3
         bool multa = false;
         public cargas(string nom, int id, int tipoA,int tipoB, int tipoC, DateTime tiempo, bool feriado)
         {
+<<<<<<< Updated upstream
             contador++;// variable que cuenta los contenedores
             this.Id = id;
             this.Nombre = nom;
@@ -36,6 +48,15 @@ namespace trasporte_TP3
             {
                 porc = 7;
             }else if (difpeso > -10)
+=======
+            this.id = id;
+            this.nombre = nom;
+           
+            hora = tiempo;
+            peso = tipoA*5 + tipoB*15 + tipoC*25;
+            difPeso = peso - 1000;
+            if (this.difPeso < -99)
+>>>>>>> Stashed changes
             {
                 porc = -5;
             }else if(difpeso >5 && difpeso <= 50)
