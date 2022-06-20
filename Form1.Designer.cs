@@ -28,23 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.tID = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.tNombre = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.dTPicker = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
             this.listBox1 = new System.Windows.Forms.ListBox();
+            this.cFeriado = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
-            // textBox4
+            // tID
             // 
-            this.textBox4.Location = new System.Drawing.Point(38, 197);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(223, 22);
-            this.textBox4.TabIndex = 7;
+            this.tID.Location = new System.Drawing.Point(38, 197);
+            this.tID.Name = "tID";
+            this.tID.Size = new System.Drawing.Size(223, 22);
+            this.tID.TabIndex = 7;
             // 
             // button2
             // 
@@ -57,7 +58,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(38, 278);
+            this.button3.Location = new System.Drawing.Point(38, 258);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(101, 48);
             this.button3.TabIndex = 10;
@@ -75,12 +76,12 @@
             this.label1.Text = "Id del contenedor";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // textBox5
+            // tNombre
             // 
-            this.textBox5.Location = new System.Drawing.Point(38, 125);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(223, 22);
-            this.textBox5.TabIndex = 12;
+            this.tNombre.Location = new System.Drawing.Point(38, 125);
+            this.tNombre.Name = "tNombre";
+            this.tNombre.Size = new System.Drawing.Size(223, 22);
+            this.tNombre.TabIndex = 12;
             // 
             // label2
             // 
@@ -97,7 +98,7 @@
             this.dTPicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dTPicker.Location = new System.Drawing.Point(38, 40);
             this.dTPicker.Name = "dTPicker";
-            this.dTPicker.Size = new System.Drawing.Size(199, 22);
+            this.dTPicker.Size = new System.Drawing.Size(223, 22);
             this.dTPicker.TabIndex = 15;
             // 
             // label3
@@ -118,20 +119,31 @@
             this.listBox1.Size = new System.Drawing.Size(250, 372);
             this.listBox1.TabIndex = 17;
             // 
+            // cFeriado
+            // 
+            this.cFeriado.AutoSize = true;
+            this.cFeriado.Location = new System.Drawing.Point(166, 258);
+            this.cFeriado.Name = "cFeriado";
+            this.cFeriado.Size = new System.Drawing.Size(88, 20);
+            this.cFeriado.TabIndex = 18;
+            this.cFeriado.Text = "FERIADO";
+            this.cFeriado.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(545, 450);
+            this.Controls.Add(this.cFeriado);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.dTPicker);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.tNombre);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.tID);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Form1";
@@ -143,15 +155,16 @@
         }
 
         #endregion
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox tID;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox tNombre;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DateTimePicker dTPicker;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.CheckBox cFeriado;
     }
 }
 

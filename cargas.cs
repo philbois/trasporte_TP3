@@ -16,7 +16,9 @@ namespace trasporte_TP3
         private double eFull = 8.95;
         private int tipoA, tipoB, tipoC;
         DateTime hora;
-        public cargas(string nom, int id, int tipoA,int tipoB, int tipoC, DateTime tiempo)
+        double costo;
+        bool feriado;
+        public cargas(string nom, int id, int tipoA,int tipoB, int tipoC, DateTime tiempo, bool feriado)
         {
             this.Id = id;
             this.Nombre = nom;
@@ -24,10 +26,19 @@ namespace trasporte_TP3
             this.TipoB=tipoB*15;
             this.TipoC=tipoC*25;
             hora = tiempo;
+            this.feriado=feriado;
 
+            if()
+            if(hora.DayOfWeek == DayOfWeek.Sunday)
+            {
+                
+            }
 
         }
-
+        public double Costo()
+        {
+            return costo
+        }
         public int Id { get => id; set => id = value; }
         public string Nombre { get => nombre; set => nombre = value; }
         public int TipoA { get => tipoA; set => tipoA = value; }
