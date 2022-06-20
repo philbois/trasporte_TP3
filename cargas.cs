@@ -32,37 +32,7 @@ namespace trasporte_TP3
             pesoEntrada=(5*tipoA) +(15* tipoB) +(25* tipoC);
             difpeso= peso- pesoEntrada;
 
-            if (difpeso > -100 && difpeso < -10)
-            {
-                porc = 7;
-            }else if (difpeso > -10)
-            {
-                porc = -5;
-            }else if(difpeso >5 && difpeso <= 50)
-            {
-                porc = 18;
-            }else if( difpeso > 50)
-            {
-                porc = 80;
-                multa = true;
-            }
-            else
-            {
-                porc = 10;
-            }
-      
-            if(hora.DayOfWeek == DayOfWeek.Sunday || feriado==true)
-            {
-                //agregar mil al precio
-            }
-            if (hora.Hour >= 6 && hora.Hour<=20)
-            {
-                descuento = -5;
-            }
-            if (!hora.Hour > 6 && hora.Hour <= 20)
-            {
-                descuento = +4;
-            }
+            
 
         }
         public double Costo()
