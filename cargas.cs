@@ -16,19 +16,23 @@ namespace trasporte_TP3
         private double eFull = 8.95;
         private int tipoA, tipoB, tipoC;
         DateTime hora;
+Int peso=1000, pesoEntrada, difpeso; //agregarcion
         double costo;
         bool feriado;
         public cargas(string nom, int id, int tipoA,int tipoB, int tipoC, DateTime tiempo, bool feriado)
         {
             this.Id = id;
             this.Nombre = nom;
-            this.TipoA=tipoA*5;
-            this.TipoB=tipoB*15;
-            this.TipoC=tipoC*25;
+            
             hora = tiempo;
             this.feriado=feriado;
+pesoEntrada=(5*tipoA) +(15* tipoB) +(25* tipoC);
+difpeso= peso- pesoEntrada;
 
-            if()
+            if(difpeso<-100)
+{
+// agrege esto
+}
             if(hora.DayOfWeek == DayOfWeek.Sunday)
             {
                 
