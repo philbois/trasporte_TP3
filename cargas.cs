@@ -9,7 +9,7 @@ namespace trasporte_TP3
 {
     internal class cargas
     {
-        static int contador=0; //contador statick
+        public static int contador=0; //contador statick
         static int sTipoA=0, sTipoB=0, sTipoC=0;//acumulador static
 
 
@@ -24,7 +24,28 @@ namespace trasporte_TP3
         int peso = 1000, pesoEntrada, difPeso, recargo=0;
         DateTime hora;
         
-
+        public string cajaMasUsada()
+        {
+            string caja;
+            if (sTipoA < sTipoB)
+            {
+                if (sTipoA > sTipoC)
+                {
+                    caja = "Tipo A";
+                }
+                else
+                {
+                    caja = "Tipo C";
+                }
+            }else if(sTipoB > sTipoC)
+            {
+                caja = "Tipo B";
+            }else
+            {
+                caja = "Tipo C";
+            }
+            return caja;
+        }
         public cargas(string nom, int id, int tipoA, int tipoB, int tipoC, DateTime tiempo, bool feriado, bool tEnvio)
         {
             contador++;// variable que cuenta los contenedores
