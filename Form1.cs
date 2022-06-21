@@ -87,8 +87,9 @@ namespace trasporte_TP3
                     contenedor[xi] = new cargas(empre, ID, tA, tB, tC, dt, fer, tEnvio);
                     //MessageBox.Show(Convert.ToString(reparto[i].Costo()));
                     recibo(xi);
+                    xi++;
                 }
-                xi++;
+                
                 vcarga.Dispose(); 
                 tNombre.Clear();
             }
