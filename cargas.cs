@@ -9,7 +9,7 @@ namespace trasporte_TP3
 {
     internal class cargas
     {
-        public static int contador=0; //contador statick
+        public static int contador=1000; //contador statick
         static int sTipoA=0, sTipoB=0, sTipoC=0;//acumulador static
 
 
@@ -18,16 +18,18 @@ namespace trasporte_TP3
         private double costoEnvio;
         private double porc, recarTiempo = 0;
         private double costo = 0;
+        private int pesoEntrada=0;
         bool feriado;
         bool tipoEnvio;
         bool multa = false;
-        int peso = 1000, pesoEntrada, difPeso, recargo=0;
+
+        int peso = 1000, difPeso, recargo=0;
         DateTime hora;
         
-        public string cajaMasUsada()
+        public static string cajaMasUsada()
         {
             string caja;
-            if (sTipoA < sTipoB)
+            if (sTipoA > sTipoB)
             {
                 if (sTipoA > sTipoC)
                 {
@@ -54,7 +56,7 @@ namespace trasporte_TP3
             hora = tiempo;//guardo hora
             this.feriado = feriado;
             pesoEntrada = (5 * tipoA) + (15 * tipoB) + (25 * tipoC);
-            difPeso = pesoEntrada - peso;
+            difPeso = PesoEntrada - peso;
             tipoEnvio = tEnvio;
             sTipoA += tipoA;
             sTipoB += tipoB; 
@@ -107,13 +109,14 @@ namespace trasporte_TP3
         public double Costo()//costo cobro
         {
             comparacion();
-            costo = (((pesoEntrada * costoEnvio) * porc)*recarTiempo) + recargo;
+            costo = (((PesoEntrada * costoEnvio) * porc)*recarTiempo) + recargo;
             return costo;
         }
         public int Id { get => id; }
 
         public bool Multa { get => multa;}
         public string Nombre { get => nombre; }
+        public int PesoEntrada { get => pesoEntrada; }
 
         public string Hora() => hora.ToString("f");
      
