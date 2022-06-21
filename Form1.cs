@@ -126,9 +126,23 @@ namespace trasporte_TP3
 
         private void button2_Click(object sender, EventArgs e)
         {
-            
-           // recibo
-           
+            /*El sistema debe generar el tickets de cada contenedor más la fecha y hora del despacho, 
+             * informar en cualquier momento cuanto se ha cobrado, cuantos contenedores se han generado, cuál es el peso promedio transportado
+y cuál es el tipo de caja más utilizado*/
+            // recibo
+            ticket.listTicket.Items.Clear();
+            ticket.listTicket.Items.Add("______________________PARCIAL___________________");
+            ticket.listTicket.Items.Add("_____________________RADHA___________________");
+            ticket.listTicket.Items.Add("_______________empresa de envio______________");
+            ticket.listTicket.Items.Add("---------------------------------------------");
+            ticket.listTicket.Items.Add("");
+            ticket.listTicket.Items.Add("Cobro total " + Total().ToString("0.00"));
+            ticket.listTicket.Items.Add("N° Contenedores: " + xi.ToString());
+            ticket.listTicket.Items.Add("Hora de despacho:");
+            ticket.listTicket.Items.Add(contenedor[x].Hora());
+            ticket.listTicket.Items.Add(" ");
+            ticket.listTicket.Items.Add("Total a cobrar: $" + (contenedor[x].Costo()).ToString("0.00"));
+            ticket.ShowDialog();
         }
     }
 }
