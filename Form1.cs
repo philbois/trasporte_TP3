@@ -44,28 +44,25 @@ namespace trasporte_TP3
                 tEnvio = vcarga.rdEnvio.Checked;
                 reparto[i] = new cargas(empre, ID, tA, tB, tC, dt, fer, tEnvio);
                 //MessageBox.Show(Convert.ToString(reparto[i].Costo()));
+                ticket.listTicket.Items.Add("____________________ticket___________________");
+                ticket.listTicket.Items.Add("_____________________RADHA___________________");
+                ticket.listTicket.Items.Add("______________(empresa de envio)_____________");
+                ticket.listTicket.Items.Add("---------------------------------------------");
+                ticket.listTicket.Items.Add("");
                 ticket.listTicket.Items.Add("Nombre de la Empresa: " + reparto[i].Nombre);
                 ticket.listTicket.Items.Add("ID: " + reparto[i].Id);
-                ticket.listTicket.Items.Add("Fecha y hora: " + reparto[i].Hora());
+                ticket.listTicket.Items.Add("Hora de despacho:");
+                ticket.listTicket.Items.Add(reparto[i].Hora());
+                ticket.listTicket.Items.Add(" ");
                 ticket.listTicket.Items.Add("Acobrar: " + reparto[i].Costo().ToString());
-                if(ticket.ShowDialog() == DialogResult.OK)
-                {
-
-                }
-
+                ticket.ShowDialog();
+                
             }
           
-           //pruebas tiempo
-                /*listBox1.Items.Add(reparto[i].Nombre);
-                listBox1.Items.Add(reparto[i].Id.ToString());
-                listBox1.Items.Add(reparto[i].TipoA.ToString());
-                listBox1.Items.Add(reparto[i].TipoB.ToString());
-                listBox1.Items.Add(reparto[i].TipoC.ToString());
-                listBox1.Items.Add(reparto[i].Hora().ToString());
-                listBox1.Items.Add(reparto[i].dia().ToString());*/
+           
                 i++;
             vcarga.Dispose();
-            //MessageBox.Show("dia" + dt.DayOfWeek+"\n hora"+dt.Hour);
+            
 
         }
     }

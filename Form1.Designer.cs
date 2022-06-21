@@ -38,27 +38,28 @@
             this.label3 = new System.Windows.Forms.Label();
             this.cFeriado = new System.Windows.Forms.CheckBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // tID
             // 
-            this.tID.Location = new System.Drawing.Point(38, 197);
+            this.tID.Location = new System.Drawing.Point(38, 180);
             this.tID.Name = "tID";
             this.tID.Size = new System.Drawing.Size(223, 22);
             this.tID.TabIndex = 7;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(38, 358);
+            this.button2.Location = new System.Drawing.Point(66, 300);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(100, 48);
             this.button2.TabIndex = 9;
-            this.button2.Text = "x";
+            this.button2.Text = "Parcial";
             this.button2.UseVisualStyleBackColor = true;
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(38, 258);
+            this.button3.Location = new System.Drawing.Point(298, 99);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(101, 48);
             this.button3.TabIndex = 10;
@@ -69,7 +70,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(35, 177);
+            this.label1.Location = new System.Drawing.Point(35, 160);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(111, 16);
             this.label1.TabIndex = 11;
@@ -78,7 +79,7 @@
             // 
             // tNombre
             // 
-            this.tNombre.Location = new System.Drawing.Point(38, 125);
+            this.tNombre.Location = new System.Drawing.Point(38, 108);
             this.tNombre.Name = "tNombre";
             this.tNombre.Size = new System.Drawing.Size(223, 22);
             this.tNombre.TabIndex = 12;
@@ -86,7 +87,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(35, 106);
+            this.label2.Location = new System.Drawing.Point(35, 89);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(147, 16);
             this.label2.TabIndex = 13;
@@ -122,18 +123,28 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(197, 358);
+            this.button1.Location = new System.Drawing.Point(241, 300);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(89, 48);
             this.button1.TabIndex = 19;
-            this.button1.Text = "button1";
+            this.button1.Text = "Z (Cerrar)";
             this.button1.UseVisualStyleBackColor = true;
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(271, 230);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(75, 47);
+            this.button4.TabIndex = 20;
+            this.button4.Text = "PONER LUPA";
+            this.button4.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(411, 450);
+            this.ClientSize = new System.Drawing.Size(411, 378);
+            this.Controls.Add(this.button4);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.cFeriado);
             this.Controls.Add(this.label3);
@@ -166,6 +177,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.CheckBox cFeriado;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button4;
     }
 }
 
