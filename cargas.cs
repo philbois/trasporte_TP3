@@ -9,8 +9,8 @@ namespace trasporte_TP3
 {
     internal class cargas
     {
-        static int contador; //contador statick
-        static int sTipoA, sTipoB, sTipoC;//acumulador static
+        static int contador=0; //contador statick
+        static int sTipoA=0, sTipoB=0, sTipoC=0;//acumulador static
 
 
         private int id;
@@ -23,12 +23,7 @@ namespace trasporte_TP3
         bool multa = false;
         int peso = 1000, pesoEntrada, difPeso, recargo=0;
         DateTime hora;
-        //private int tipoA, tipoB, tipoC;
-
-
-
-
-
+        
 
         public cargas(string nom, int id, int tipoA, int tipoB, int tipoC, DateTime tiempo, bool feriado, bool tEnvio)
         {

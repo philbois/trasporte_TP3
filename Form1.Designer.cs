@@ -132,11 +132,11 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(271, 230);
+            this.button4.Image = global::trasporte_TP3.Properties.Resources._3;
+            this.button4.Location = new System.Drawing.Point(302, 180);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(75, 47);
             this.button4.TabIndex = 20;
-            this.button4.Text = "PONER LUPA";
             this.button4.UseVisualStyleBackColor = true;
             // 
             // Form1
