@@ -29,10 +29,12 @@ namespace trasporte_TP3
             ticket.listTicket.Items.Add("_______________empresa de envio______________");
             ticket.listTicket.Items.Add("---------------------------------------------");
             ticket.listTicket.Items.Add("");
-            ticket.listTicket.Items.Add("Nombre de la Empresa: " + contenedor[x].Nombre);
-            ticket.listTicket.Items.Add("ID: " + contenedor[x].Id);
             ticket.listTicket.Items.Add("Hora de despacho:");
             ticket.listTicket.Items.Add(contenedor[x].Hora());
+            ticket.listTicket.Items.Add("");
+            ticket.listTicket.Items.Add("Nombre de la Empresa: " + contenedor[x].Nombre);
+            ticket.listTicket.Items.Add("ID: " + contenedor[x].Id);
+
             ticket.listTicket.Items.Add(" ");
             ticket.listTicket.Items.Add("Total a cobrar: $" + (contenedor[x].Costo()).ToString("0.00"));
             ticket.ShowDialog();
@@ -54,8 +56,7 @@ namespace trasporte_TP3
         }
 
         private void label1_Click(object sender, EventArgs e)
-        {
-            
+        {    
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -72,6 +73,7 @@ namespace trasporte_TP3
             // DateTime tiempo = DateTime.Now; 
             string empre = tNombre.Text;
             int ID = Convert.ToInt32(tID.Text);
+            
             for (int j = 0; j < xi ; j++)
             {
                 if (contenedor[j].Id == Convert.ToInt32(tID.Text))
@@ -89,23 +91,19 @@ namespace trasporte_TP3
                     tC = Convert.ToInt32(vcarga.textC.Text);
                     tEnvio = vcarga.rdEnvio.Checked;
                     contenedor[xi] = new cargas(empre, ID, tA, tB, tC, dt, fer, tEnvio);
-                    //MessageBox.Show(Convert.ToString(reparto[i].Costo()));
+                   
                     recibo(xi);
                     xi++;
                 }
-                
                 vcarga.Dispose(); 
                 tNombre.Clear();
             }
             tID.Clear();
-            
-
         }
       
-
-
         private void button1_Click(object sender, EventArgs e)
         {
+            parce();
             ticket.listTicket.Items.Add("----------CONTENEDORES CON MULTA----------");
             for (int j = 0; j < xi; j++)
             {
@@ -114,20 +112,23 @@ namespace trasporte_TP3
                     ticket.listTicket.Items.Add("ID: " + contenedor[j].Id);
                     ticket.listTicket.Items.Add("Nombre de la Empresa: " + contenedor[j].Nombre);
                     ticket.listTicket.Items.Add("Peso: " + contenedor[j].PesoEntrada);
+                    ticket.listTicket.Items.Add("");
                 }
             }
-                    Close();
+            ticket.ShowDialog();
+
+            Close();
         }
 
         private void button4_Click_1(object sender, EventArgs e)//buscar id
         {
             int aux = -1;
-            for (int j = 0; j < xi-1; j++)
+            for (int j = 0; j < xi; j++)
             {
                 if (contenedor[j].Id == Convert.ToInt32(tID.Text))
                 {
                     aux = j;
-                    MessageBox.Show("un exito - LO ENCONTRE");
+                    //MessageBox.Show("un exito - LO ENCONTRE");
                 }
             }
            
@@ -135,30 +136,31 @@ namespace trasporte_TP3
             {
                 recibo(aux);
             }
-            else MessageBox.Show("No exito - NO SE ENCONTRO");
+            else MessageBox.Show("NO SE ENCONTRO");
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            /*El sistema debe generar el tickets de cada contenedor más la fecha y hora del despacho, 
-             * informar en cualquier momento cuanto se ha cobrado, cuantos contenedores se han generado,
-             * * cuál es el peso promedio transportado
-             * y cuál es el tipo de caja más utilizado*/
-            // recibo
+            
+            parce();
+            ticket.ShowDialog();
+        }
+        private void parce()
+        {
             Total();
             ticket.listTicket.Items.Clear();
-            ticket.listTicket.Items.Add("______________________PARCIAL___________________");
+            ticket.listTicket.Items.Add(" ");
             ticket.listTicket.Items.Add("_____________________RADHA___________________");
             ticket.listTicket.Items.Add("_______________empresa de envio______________");
             ticket.listTicket.Items.Add("---------------------------------------------");
             ticket.listTicket.Items.Add("");
             ticket.listTicket.Items.Add("Cobro total " + total.ToString("0.00"));
             ticket.listTicket.Items.Add("N° Contenedores: " + (xi).ToString());
-            ticket.listTicket.Items.Add("Peso Promedio: "+(acum/(xi)).ToString("0.00"));
-            ticket.listTicket.Items.Add("Caja mas usada "+cargas.cajaMasUsada());
+            ticket.listTicket.Items.Add("Peso Promedio: " + (acum / (xi)).ToString("0.00"));
+            ticket.listTicket.Items.Add("Caja mas usada " + cargas.cajaMasUsada());
             ticket.listTicket.Items.Add(" ");
-           // ticket.listTicket.Items.Add("Total a cobrar: $" + (contenedor[x].Costo()).ToString("0.00"));
-            ticket.ShowDialog();
+         
+           
         }
     }
 }

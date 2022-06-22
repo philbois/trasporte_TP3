@@ -67,7 +67,7 @@
             this.MinimizeBox = false;
             this.Name = "Form3";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form3";
+            this.Text = "Radha";
             this.Load += new System.EventHandler(this.Form3_Load);
             this.ResumeLayout(false);
 

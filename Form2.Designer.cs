@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.rdEnvio = new System.Windows.Forms.RadioButton();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.textC = new System.Windows.Forms.TextBox();
@@ -39,9 +42,6 @@
             this.textA = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.rdEnvio = new System.Windows.Forms.RadioButton();
-            this.label2 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -64,6 +64,37 @@
             this.groupBox1.TabIndex = 15;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Carga";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(24, 152);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(90, 16);
+            this.label2.TabIndex = 19;
+            this.label2.Text = "Tipo de envio";
+            // 
+            // rdEnvio
+            // 
+            this.rdEnvio.AutoSize = true;
+            this.rdEnvio.Checked = true;
+            this.rdEnvio.Location = new System.Drawing.Point(27, 174);
+            this.rdEnvio.Name = "rdEnvio";
+            this.rdEnvio.Size = new System.Drawing.Size(72, 20);
+            this.rdEnvio.TabIndex = 18;
+            this.rdEnvio.TabStop = true;
+            this.rdEnvio.Text = "Normal";
+            this.rdEnvio.UseVisualStyleBackColor = true;
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(143, 174);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(49, 20);
+            this.radioButton1.TabIndex = 17;
+            this.radioButton1.Text = "Full";
+            this.radioButton1.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -163,37 +194,6 @@
             this.button2.Text = "Volver";
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(143, 174);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(49, 20);
-            this.radioButton1.TabIndex = 17;
-            this.radioButton1.Text = "Full";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            // 
-            // rdEnvio
-            // 
-            this.rdEnvio.AutoSize = true;
-            this.rdEnvio.Checked = true;
-            this.rdEnvio.Location = new System.Drawing.Point(27, 174);
-            this.rdEnvio.Name = "rdEnvio";
-            this.rdEnvio.Size = new System.Drawing.Size(72, 20);
-            this.rdEnvio.TabIndex = 18;
-            this.rdEnvio.TabStop = true;
-            this.rdEnvio.Text = "Normal";
-            this.rdEnvio.UseVisualStyleBackColor = true;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(24, 152);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(90, 16);
-            this.label2.TabIndex = 19;
-            this.label2.Text = "Tipo de envio";
-            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -206,7 +206,7 @@
             this.MinimizeBox = false;
             this.Name = "Form2";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form2";
+            this.Text = "Radha";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);

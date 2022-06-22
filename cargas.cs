@@ -9,7 +9,7 @@ namespace trasporte_TP3
 {
     internal class cargas
     {
-        public static int contador=1000; //contador statick
+        
         static int sTipoA=0, sTipoB=0, sTipoC=0;//acumulador static
 
 
@@ -50,7 +50,7 @@ namespace trasporte_TP3
         }
         public cargas(string nom, int id, int tipoA, int tipoB, int tipoC, DateTime tiempo, bool feriado, bool tEnvio)
         {
-            contador++;// variable que cuenta los contenedores
+           
             this.id = id; //guardo id
             this.nombre = nom; 
             hora = tiempo;//guardo hora
