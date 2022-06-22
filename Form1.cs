@@ -24,16 +24,18 @@ namespace trasporte_TP3
         private void recibo(int x )
         {
             ticket.listTicket.Items.Clear();
-            ticket.listTicket.Items.Add("______________________ticket___________________");
-            ticket.listTicket.Items.Add("_____________________RADHA___________________");
-            ticket.listTicket.Items.Add("_______________empresa de envio______________");
-            ticket.listTicket.Items.Add("---------------------------------------------");
+            ticket.listTicket.Items.Add(" ");
+            //  ticket.listTicket.Items.Add(string.Format("____________________ticket___________________"));
+            ticket.listTicket.Items.Add(" ");
+            ticket.listTicket.Items.Add(string.Format("{0,25}", "RADHA"));
+            ticket.listTicket.Items.Add(string.Format("{0,30}", "empresa de envio"));
+            ticket.listTicket.Items.Add(string.Format("---------------------------------------------"));
             ticket.listTicket.Items.Add("");
-            ticket.listTicket.Items.Add("Hora de despacho:");
+            ticket.listTicket.Items.Add(string.Format("Hora de despacho:"));
             ticket.listTicket.Items.Add(contenedor[x].Hora());
             ticket.listTicket.Items.Add("");
-            ticket.listTicket.Items.Add("Nombre de la Empresa: " + contenedor[x].Nombre);
-            ticket.listTicket.Items.Add("ID: " + contenedor[x].Id);
+            ticket.listTicket.Items.Add(string.Format("Nombre de la Empresa: " + contenedor[x].Nombre));
+            ticket.listTicket.Items.Add(string.Format("ID: " + contenedor[x].Id));
 
             ticket.listTicket.Items.Add(" ");
             ticket.listTicket.Items.Add("Total a cobrar: $" + (contenedor[x].Costo()).ToString("0.00"));
@@ -104,14 +106,14 @@ namespace trasporte_TP3
         private void button1_Click(object sender, EventArgs e)
         {
             parce();
-            ticket.listTicket.Items.Add("----------CONTENEDORES CON MULTA----------");
+            ticket.listTicket.Items.Add("       CONTENEDORES CON MULTA");
             for (int j = 0; j < xi; j++)
             {
                 if (contenedor[j].Multa== true)
                 {
-                    ticket.listTicket.Items.Add("ID: " + contenedor[j].Id);
-                    ticket.listTicket.Items.Add("Nombre de la Empresa: " + contenedor[j].Nombre);
-                    ticket.listTicket.Items.Add("Peso: " + contenedor[j].PesoEntrada);
+                    ticket.listTicket.Items.Add(string.Format("ID: {0,15}" , contenedor[j].Id));
+                    ticket.listTicket.Items.Add(string.Format("Nombre de la Empresa: {0,15}" , contenedor[j].Nombre));
+                    ticket.listTicket.Items.Add(string.Format("Peso: " , contenedor[j].PesoEntrada));
                     ticket.listTicket.Items.Add("");
                 }
             }
@@ -150,8 +152,8 @@ namespace trasporte_TP3
             Total();
             ticket.listTicket.Items.Clear();
             ticket.listTicket.Items.Add(" ");
-            ticket.listTicket.Items.Add("_____________________RADHA___________________");
-            ticket.listTicket.Items.Add("_______________empresa de envio______________");
+            ticket.listTicket.Items.Add(string.Format("{0,25}", "RADHA"));
+            ticket.listTicket.Items.Add(string.Format("{0,30}", "empresa de envio"));
             ticket.listTicket.Items.Add("---------------------------------------------");
             ticket.listTicket.Items.Add("");
             ticket.listTicket.Items.Add("Cobro total " + total.ToString("0.00"));

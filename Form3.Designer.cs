@@ -34,22 +34,24 @@
             // 
             // listTicket
             // 
-            this.listTicket.Dock = System.Windows.Forms.DockStyle.Top;
-            this.listTicket.Font = new System.Drawing.Font("Californian FB", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listTicket.BackColor = System.Drawing.SystemColors.MenuText;
+            this.listTicket.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.listTicket.Font = new System.Drawing.Font("Courier New", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listTicket.ForeColor = System.Drawing.SystemColors.MenuBar;
             this.listTicket.FormattingEnabled = true;
-            this.listTicket.ItemHeight = 24;
+            this.listTicket.ItemHeight = 20;
             this.listTicket.Location = new System.Drawing.Point(0, 0);
             this.listTicket.Name = "listTicket";
             this.listTicket.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.listTicket.SelectionMode = System.Windows.Forms.SelectionMode.None;
-            this.listTicket.Size = new System.Drawing.Size(443, 388);
+            this.listTicket.Size = new System.Drawing.Size(494, 517);
             this.listTicket.TabIndex = 0;
             // 
             // button1
             // 
             this.button1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.button1.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.button1.Location = new System.Drawing.Point(167, 413);
+            this.button1.Location = new System.Drawing.Point(369, 443);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(89, 51);
             this.button1.TabIndex = 1;
@@ -60,7 +62,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(443, 476);
+            this.ClientSize = new System.Drawing.Size(494, 517);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.listTicket);
             this.MaximizeBox = false;

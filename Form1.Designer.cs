@@ -39,7 +39,6 @@
             this.cFeriado = new System.Windows.Forms.CheckBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.valorC = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // tID
@@ -143,19 +142,11 @@
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click_1);
             // 
-            // valorC
-            // 
-            this.valorC.Location = new System.Drawing.Point(38, 239);
-            this.valorC.Name = "valorC";
-            this.valorC.Size = new System.Drawing.Size(100, 22);
-            this.valorC.TabIndex = 17;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(411, 378);
-            this.Controls.Add(this.valorC);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.cFeriado);
@@ -190,7 +181,6 @@
         private System.Windows.Forms.CheckBox cFeriado;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.TextBox valorC;
     }
 }
 

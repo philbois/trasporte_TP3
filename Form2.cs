@@ -31,5 +31,10 @@ namespace trasporte_TP3
         {
             textC.Enabled = checkBox3.Checked;
         }
+
+        private void Form2_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
