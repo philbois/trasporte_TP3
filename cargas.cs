@@ -9,8 +9,8 @@ namespace trasporte_TP3
 {
     internal class cargas
     {
-        static int contador; //contador statick
-        static int sTipoA, sTipoB, sTipoC;//acumulador static
+        public static int contador=1000; //contador statick
+        static int sTipoA=0, sTipoB=0, sTipoC=0;//acumulador static
 
 
         private int id;
@@ -18,18 +18,36 @@ namespace trasporte_TP3
         private double costoEnvio;
         private double porc, recarTiempo = 0;
         private double costo = 0;
+        private int pesoEntrada=0;
         bool feriado;
         bool tipoEnvio;
         bool multa = false;
-        int peso = 1000, pesoEntrada, difPeso, recargo=0;
+
+        int peso = 1000, difPeso, recargo=0;
         DateTime hora;
-        //private int tipoA, tipoB, tipoC;
-
-
-
-
-
-
+        
+        public static string cajaMasUsada()
+        {
+            string caja;
+            if (sTipoA > sTipoB)
+            {
+                if (sTipoA > sTipoC)
+                {
+                    caja = "Tipo A";
+                }
+                else
+                {
+                    caja = "Tipo C";
+                }
+            }else if(sTipoB > sTipoC)
+            {
+                caja = "Tipo B";
+            }else
+            {
+                caja = "Tipo C";
+            }
+            return caja;
+        }
         public cargas(string nom, int id, int tipoA, int tipoB, int tipoC, DateTime tiempo, bool feriado, bool tEnvio)
         {
             contador++;// variable que cuenta los contenedores
@@ -38,7 +56,7 @@ namespace trasporte_TP3
             hora = tiempo;//guardo hora
             this.feriado = feriado;
             pesoEntrada = (5 * tipoA) + (15 * tipoB) + (25 * tipoC);
-            difPeso = pesoEntrada - peso;
+            difPeso = PesoEntrada - peso;
             tipoEnvio = tEnvio;
             sTipoA += tipoA;
             sTipoB += tipoB; 
@@ -91,13 +109,14 @@ namespace trasporte_TP3
         public double Costo()//costo cobro
         {
             comparacion();
-            costo = (((pesoEntrada * costoEnvio) * porc)*recarTiempo) + recargo;
+            costo = (((PesoEntrada * costoEnvio) * porc)*recarTiempo) + recargo;
             return costo;
         }
         public int Id { get => id; }
 
         public bool Multa { get => multa;}
         public string Nombre { get => nombre; }
+        public int PesoEntrada { get => pesoEntrada; }
 
         public string Hora() => hora.ToString("f");
      

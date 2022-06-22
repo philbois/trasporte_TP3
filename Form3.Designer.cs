@@ -53,7 +53,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(89, 51);
             this.button1.TabIndex = 1;
-            this.button1.Text = "cobrar";
+            this.button1.Text = "Aceptar";
             this.button1.UseVisualStyleBackColor = true;
             // 
             // Form3
@@ -68,6 +68,7 @@
             this.Name = "Form3";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form3";
+            this.Load += new System.EventHandler(this.Form3_Load);
             this.ResumeLayout(false);
 
         }

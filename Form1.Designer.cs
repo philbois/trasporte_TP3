@@ -46,23 +46,24 @@
             this.tID.Location = new System.Drawing.Point(38, 180);
             this.tID.Name = "tID";
             this.tID.Size = new System.Drawing.Size(223, 22);
-            this.tID.TabIndex = 7;
+            this.tID.TabIndex = 4;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(66, 300);
+            this.button2.Location = new System.Drawing.Point(38, 300);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(100, 48);
-            this.button2.TabIndex = 9;
+            this.button2.TabIndex = 7;
             this.button2.Text = "Parcial";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
             this.button3.Location = new System.Drawing.Point(298, 99);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(101, 48);
-            this.button3.TabIndex = 10;
+            this.button3.TabIndex = 5;
             this.button3.Text = "Nuevo";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
@@ -82,7 +83,7 @@
             this.tNombre.Location = new System.Drawing.Point(38, 108);
             this.tNombre.Name = "tNombre";
             this.tNombre.Size = new System.Drawing.Size(223, 22);
-            this.tNombre.TabIndex = 12;
+            this.tNombre.TabIndex = 3;
             // 
             // label2
             // 
@@ -100,7 +101,7 @@
             this.dTPicker.Location = new System.Drawing.Point(38, 40);
             this.dTPicker.Name = "dTPicker";
             this.dTPicker.Size = new System.Drawing.Size(223, 22);
-            this.dTPicker.TabIndex = 15;
+            this.dTPicker.TabIndex = 1;
             // 
             // label3
             // 
@@ -117,27 +118,29 @@
             this.cFeriado.Location = new System.Drawing.Point(289, 44);
             this.cFeriado.Name = "cFeriado";
             this.cFeriado.Size = new System.Drawing.Size(88, 20);
-            this.cFeriado.TabIndex = 18;
+            this.cFeriado.TabIndex = 2;
             this.cFeriado.Text = "FERIADO";
             this.cFeriado.UseVisualStyleBackColor = true;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(241, 300);
+            this.button1.Location = new System.Drawing.Point(172, 300);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(89, 48);
-            this.button1.TabIndex = 19;
+            this.button1.TabIndex = 8;
             this.button1.Text = "Z (Cerrar)";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(271, 230);
+            this.button4.Image = global::trasporte_TP3.Properties.Resources._3;
+            this.button4.Location = new System.Drawing.Point(337, 204);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 47);
-            this.button4.TabIndex = 20;
-            this.button4.Text = "PONER LUPA";
+            this.button4.Size = new System.Drawing.Size(40, 34);
+            this.button4.TabIndex = 6;
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click_1);
             // 
             // Form1
             // 
