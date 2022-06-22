@@ -21,7 +21,7 @@ namespace trasporte_TP3
         double total=0;
        
 
-        public void recibo(int x )
+        private void recibo(int x )
         {
             ticket.listTicket.Items.Clear();
             ticket.listTicket.Items.Add("______________________ticket___________________");
@@ -106,8 +106,17 @@ namespace trasporte_TP3
 
         private void button1_Click(object sender, EventArgs e)
         {
-
-            Close();
+            ticket.listTicket.Items.Add("----------CONTENEDORES CON MULTA----------");
+            for (int j = 0; j < xi; j++)
+            {
+                if (contenedor[j].Multa== true)
+                {
+                    ticket.listTicket.Items.Add("ID: " + contenedor[j].Id);
+                    ticket.listTicket.Items.Add("Nombre de la Empresa: " + contenedor[j].Nombre);
+                    ticket.listTicket.Items.Add("Peso: " + contenedor[j].PesoEntrada);
+                }
+            }
+                    Close();
         }
 
         private void button4_Click_1(object sender, EventArgs e)//buscar id
