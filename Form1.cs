@@ -36,7 +36,6 @@ namespace trasporte_TP3
             ticket.listTicket.Items.Add("");
             ticket.listTicket.Items.Add(string.Format("Nombre de la Empresa: " + contenedor[x].Nombre));
             ticket.listTicket.Items.Add(string.Format("ID: " + contenedor[x].Id));
-
             ticket.listTicket.Items.Add(" ");
             ticket.listTicket.Items.Add("Total a cobrar: $" + (contenedor[x].Costo()).ToString("0.00"));
             ticket.ShowDialog();
@@ -44,7 +43,6 @@ namespace trasporte_TP3
         
         private void Total()
         {
-            
             for (int j = 0; j < xi ; j++)
             {
                 total += contenedor[j].Costo();
@@ -66,7 +64,6 @@ namespace trasporte_TP3
 
             vcarga=new Form2();
             bool exiteID = true;
-        
             int tA = 0, tB=0, tC=0;
             bool fer = false;
             bool tEnvio=false;
@@ -74,6 +71,7 @@ namespace trasporte_TP3
             DateTime dt = dTPicker.Value;
             // DateTime tiempo = DateTime.Now; 
             string empre = tNombre.Text;
+            int pesoC = Convert.ToInt32(textPeso.Text);
             int ID = Convert.ToInt32(tID.Text);
             
             for (int j = 0; j < xi ; j++)
@@ -92,7 +90,7 @@ namespace trasporte_TP3
                     tB = Convert.ToInt32(vcarga.textB.Text);
                     tC = Convert.ToInt32(vcarga.textC.Text);
                     tEnvio = vcarga.rdEnvio.Checked;
-                    contenedor[xi] = new cargas(empre, ID, tA, tB, tC, dt, fer, tEnvio);
+                    contenedor[xi] = new cargas(empre,pesoC, ID, tA, tB, tC, dt, fer, tEnvio);
                    
                     recibo(xi);
                     xi++;
@@ -111,9 +109,9 @@ namespace trasporte_TP3
             {
                 if (contenedor[j].Multa== true)
                 {
-                    ticket.listTicket.Items.Add(string.Format("ID: {0,15}" , contenedor[j].Id));
+                    ticket.listTicket.Items.Add(string.Format("ID: {0,33}" , contenedor[j].Id));
                     ticket.listTicket.Items.Add(string.Format("Nombre de la Empresa: {0,15}" , contenedor[j].Nombre));
-                    ticket.listTicket.Items.Add(string.Format("Peso: " , contenedor[j].PesoEntrada));
+                    ticket.listTicket.Items.Add(string.Format("Peso: {0,31}" , contenedor[j].PesoEntrada));
                     ticket.listTicket.Items.Add("");
                 }
             }

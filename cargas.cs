@@ -11,8 +11,6 @@ namespace trasporte_TP3
     {
         
         static int sTipoA=0, sTipoB=0, sTipoC=0;//acumulador static
-
-
         private int id;
         private string nombre;
         private double costoEnvio;
@@ -23,9 +21,8 @@ namespace trasporte_TP3
         bool tipoEnvio;
         bool multa = false;
 
-        int peso = 1000, difPeso, recargo=0;
+        int peso, difPeso, recargo=0;
         DateTime hora;
-        
         public static string cajaMasUsada()
         {
             string caja;
@@ -48,9 +45,9 @@ namespace trasporte_TP3
             }
             return caja;
         }
-        public cargas(string nom, int id, int tipoA, int tipoB, int tipoC, DateTime tiempo, bool feriado, bool tEnvio)
+        public cargas(string nom, int peso ,int id, int tipoA, int tipoB, int tipoC, DateTime tiempo, bool feriado, bool tEnvio)
         {
-           
+            this.peso = peso;
             this.id = id; //guardo id
             this.nombre = nom; 
             hora = tiempo;//guardo hora
@@ -112,13 +109,12 @@ namespace trasporte_TP3
             costo = (((PesoEntrada * costoEnvio) * porc)*recarTiempo) + recargo;
             return costo;
         }
-        public int Id { get => id; }
 
+        public string Hora() => hora.ToString("f");
+        public int Id { get => id; }
         public bool Multa { get => multa;}
         public string Nombre { get => nombre; }
         public int PesoEntrada { get => pesoEntrada; }
 
-        public string Hora() => hora.ToString("f");
-     
     }
 }

@@ -39,6 +39,8 @@
             this.cFeriado = new System.Windows.Forms.CheckBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
+            this.textPeso = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // tID
@@ -135,18 +137,37 @@
             // button4
             // 
             this.button4.Image = global::trasporte_TP3.Properties.Resources._3;
-            this.button4.Location = new System.Drawing.Point(337, 204);
+            this.button4.Location = new System.Drawing.Point(359, 332);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(40, 34);
             this.button4.TabIndex = 6;
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click_1);
             // 
+            // textPeso
+            // 
+            this.textPeso.Location = new System.Drawing.Point(38, 253);
+            this.textPeso.Name = "textPeso";
+            this.textPeso.Size = new System.Drawing.Size(219, 22);
+            this.textPeso.TabIndex = 17;
+            this.textPeso.Text = "1000";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(38, 237);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(115, 16);
+            this.label4.TabIndex = 18;
+            this.label4.Text = "Pesos Contratado";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(411, 378);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.textPeso);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.cFeriado);
@@ -181,6 +202,8 @@
         private System.Windows.Forms.CheckBox cFeriado;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.TextBox textPeso;
+        private System.Windows.Forms.Label label4;
     }
 }
 
