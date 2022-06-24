@@ -77,7 +77,7 @@ namespace trasporte_TP3
             else if (difPeso > 5 && difPeso <= 50)
             {
                 porc = 1.18;
-                multa = true;
+               
             }
             else
             {
