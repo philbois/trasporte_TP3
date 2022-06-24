@@ -18,7 +18,7 @@ namespace trasporte_TP3
         Form3 ticket = new Form3();
         public int xi = 0;
         int acum = 0;
-        double total=0;
+        
        
 
         private void recibo(int x )
@@ -43,7 +43,8 @@ namespace trasporte_TP3
         
         private void Total()
         {
-            for (int j = 0; j < xi ; j++)
+            double total = 0;
+            for (int j = 0; j < xi; j++)
             {
                 total += contenedor[j].Costo();
                 acum += contenedor[j].PesoEntrada;
@@ -99,6 +100,7 @@ namespace trasporte_TP3
                 tNombre.Clear();
             }
             tID.Clear();
+            
         }
       
         private void button1_Click(object sender, EventArgs e)
@@ -147,7 +149,7 @@ namespace trasporte_TP3
         }
         private void parce()
         {
-            Total();
+            
             ticket.listTicket.Items.Clear();
             ticket.listTicket.Items.Add(" ");
             ticket.listTicket.Items.Add(string.Format("{0,25}", "RADHA"));
