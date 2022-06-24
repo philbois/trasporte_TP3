@@ -41,7 +41,7 @@ namespace trasporte_TP3
             ticket.ShowDialog();
         }
         
-        private void Total()
+        private double Total()
         {
             double total = 0;
             for (int j = 0; j < xi; j++)
@@ -49,6 +49,7 @@ namespace trasporte_TP3
                 total += contenedor[j].Costo();
                 acum += contenedor[j].PesoEntrada;
             }
+            return total;
         }
         
         public Form1()
@@ -156,7 +157,7 @@ namespace trasporte_TP3
             ticket.listTicket.Items.Add(string.Format("{0,30}", "empresa de envio"));
             ticket.listTicket.Items.Add("---------------------------------------------");
             ticket.listTicket.Items.Add("");
-            ticket.listTicket.Items.Add("Cobro total " + total.ToString("0.00"));
+            ticket.listTicket.Items.Add("Cobro total " + Total().ToString("0.00"));
             ticket.listTicket.Items.Add("N° Contenedores: " + (xi).ToString());
             ticket.listTicket.Items.Add("Peso Promedio: " + (acum / (xi)).ToString("0.00"));
             ticket.listTicket.Items.Add("Caja mas usada " + cargas.cajaMasUsada());
