@@ -50,6 +50,7 @@
             this.tID.Name = "tID";
             this.tID.Size = new System.Drawing.Size(223, 22);
             this.tID.TabIndex = 4;
+            this.tID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tID_KeyPress);
             // 
             // button2
             // 

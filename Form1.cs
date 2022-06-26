@@ -165,5 +165,15 @@ namespace trasporte_TP3
          
            
         }
+
+        private void tID_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsNumber(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+                e.Handled = true;
+        }
     }
 }

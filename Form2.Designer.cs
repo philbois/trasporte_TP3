@@ -123,6 +123,7 @@
             this.textC.Size = new System.Drawing.Size(100, 22);
             this.textC.TabIndex = 3;
             this.textC.Text = "0";
+            this.textC.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textC_KeyPress);
             // 
             // checkBox1
             // 
@@ -143,6 +144,7 @@
             this.textB.Size = new System.Drawing.Size(100, 22);
             this.textB.TabIndex = 2;
             this.textB.Text = "0";
+            this.textB.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textB_KeyPress);
             // 
             // checkBox2
             // 
@@ -174,6 +176,7 @@
             this.textA.Size = new System.Drawing.Size(100, 22);
             this.textA.TabIndex = 1;
             this.textA.Text = "0";
+            this.textA.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textA_KeyPress);
             // 
             // button1
             // 
