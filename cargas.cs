@@ -53,7 +53,7 @@ namespace trasporte_TP3
             hora = tiempo;//guardo hora
             this.feriado = feriado;
             pesoEntrada = (5 * tipoA) + (15 * tipoB) + (25 * tipoC);
-            difPeso = PesoEntrada - peso;
+            difPeso = pesoEntrada - peso;
             tipoEnvio = tEnvio;
             sTipoA += tipoA;
             sTipoB += tipoB; 
@@ -93,7 +93,7 @@ namespace trasporte_TP3
             {
                 recarTiempo = 0.95;
             }
-            if (!(hora.Hour > 6 && hora.Hour <= 20))//hora fuera de las 6 y 20 
+            if (!(hora.Hour >= 6 && hora.Hour <= 20))//hora fuera de las 6 y 20 
             {
                 recarTiempo = 1.04;
             }
@@ -113,7 +113,7 @@ namespace trasporte_TP3
         public string Hora() => hora.ToString("f");
         public int Id { get => id; }
         public bool Multa { get => multa;}
-        public string Nombre { get => nombre; }
+        public string Nombre { get => nombre;}
         public int PesoEntrada { get => pesoEntrada; }
 
     }

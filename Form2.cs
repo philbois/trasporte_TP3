@@ -39,7 +39,7 @@ namespace trasporte_TP3
 
         private void textA_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (char.IsNumber(e.KeyChar))
+            if (char.IsNumber(e.KeyChar)|| e.KeyChar == (char)8)
             {
                 e.Handled = false;
             }
@@ -49,7 +49,7 @@ namespace trasporte_TP3
 
         private void textB_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (char.IsNumber(e.KeyChar))
+            if (char.IsNumber(e.KeyChar)|| e.KeyChar == (char)8)
             {
                 e.Handled = false;
             }
@@ -59,12 +59,22 @@ namespace trasporte_TP3
 
         private void textC_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (char.IsNumber(e.KeyChar))
+            if (char.IsNumber(e.KeyChar)|| e.KeyChar == (char)8)
             {
                 e.Handled = false;
             }
             else
                 e.Handled = true;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textA_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

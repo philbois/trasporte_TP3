@@ -176,6 +176,7 @@
             this.textA.Size = new System.Drawing.Size(100, 22);
             this.textA.TabIndex = 1;
             this.textA.Text = "0";
+            this.textA.TextChanged += new System.EventHandler(this.textA_TextChanged);
             this.textA.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textA_KeyPress);
             // 
             // button1
@@ -197,6 +198,7 @@
             this.button2.TabIndex = 17;
             this.button2.Text = "Volver";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // Form2
             // 
