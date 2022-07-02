@@ -84,7 +84,7 @@
             // 
             // tNombre
             // 
-            this.tNombre.Location = new System.Drawing.Point(38, 108);
+            this.tNombre.Location = new System.Drawing.Point(38, 112);
             this.tNombre.Name = "tNombre";
             this.tNombre.Size = new System.Drawing.Size(223, 22);
             this.tNombre.TabIndex = 3;
