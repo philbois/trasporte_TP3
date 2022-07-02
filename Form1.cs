@@ -84,6 +84,7 @@ namespace trasporte_TP3
                     MessageBox.Show("EL ID DEL CONTENEDOR YA FUE INGRESADO");
                 }
             }//BUSCA ID
+           
 
             if (exiteID)
             {
