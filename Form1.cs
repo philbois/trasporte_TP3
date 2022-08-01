@@ -17,7 +17,7 @@ namespace trasporte_TP3
        // generadorT recibo=new generadorT();
         Form3 vTicket = new Form3();
         public int xi = 0;
-        int acum = 0;
+        
         
        
 
@@ -45,14 +45,26 @@ namespace trasporte_TP3
         private double Total()
         {
             double total = 0;
+            
             for (int j = 0; j < xi; j++)
             {
                 total += contenedor[j].Costo();
-                acum += contenedor[j].PesoEntrada;
+               
             }
+          
+            
             return total;
         }
-        
+
+        private double Acum()    
+        { double acum = 0;
+            for(int j = 0; j < xi; j++)
+            {
+                acum += contenedor[j].PesoEntrada;
+            }
+            return acum;
+        }
+
         public Form1()
         {
             InitializeComponent();
@@ -162,7 +174,7 @@ namespace trasporte_TP3
             vTicket.listTicket.Items.Add("");
             vTicket.listTicket.Items.Add("Cobro total " + Total().ToString("0.00"));
             vTicket.listTicket.Items.Add("N° Contenedores: " + (xi).ToString());
-            vTicket.listTicket.Items.Add("Peso Promedio: " + (acum / (xi)).ToString("0.00"));
+            vTicket.listTicket.Items.Add("Peso Promedio: " + (Acum() / (xi)).ToString("0.00"));
             vTicket.listTicket.Items.Add("Caja mas usada " + cargas.cajaMasUsada());
             vTicket.listTicket.Items.Add(" ");
          
@@ -177,6 +189,11 @@ namespace trasporte_TP3
             }
             else
                 e.Handled = true;
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            this.tID.Focus();            
         }
     }
 }
